@@ -1,6 +1,6 @@
 # High&Low
 
-
+https://github.com/taisei-ide-0123/02_06_High-Low
 
 ## トランプのハイアンドローゲーム
 
