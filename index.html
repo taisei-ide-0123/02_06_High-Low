@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>High&Low</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- 見出し -->
+  <div class="text">
+    <h1>High&Low</h1>
+    <p>
+      左のカードより数字が大きいと思ったらHigh
+      <br>
+      小さいと思ったらLowを選んでね！
+    </p>
+    <!-- 結果 -->
+    <div id="result" class="hidden">result</div>
+  </div>
+  <!-- カード -->
+  <div class="container">
+    <!-- ディーラー（左）のカード -->
+    <div class="dealer">
+      <div class="dealer-card" id="dealer_card">1</div>
+    </div>
+    <!-- スペース -->
+    <div class="card-space">
+    </div>
+    <!-- プレイヤー（右）のカード -->
+    <div class="player">
+      <div id="wrapper">
+        <div class="player-card">
+          <div class="player-card back">
+            <img class="player-card img" src="image/PlayingCardBackSide.jpg" alt="">
+          </div>
+          <div class="front-card" id="player_card">5</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ボタン -->
+  <div class="buttom">
+    <div class="btn" id="high">High</div>
+    <div class="buttom-space">
+      <div class="secret" id="next">
+        <div class="next-btn">Next</div>
+      </div>
+    </div>
+    <div class="btn" id="low">Low</div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

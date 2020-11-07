@@ -1,0 +1,216 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../image/background-image.jpg");
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+}
+
+/* 見出し */
+.text h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.text p {
+  text-align: center;
+  font-size: 25px;
+}
+
+/* 結果 */
+#result {
+  text-align: center;
+  font-size: 70px;
+  line-height: 70px;
+  color: #000;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* カード */
+.container {
+  width: 100%;
+  height: 300px;
+  margin: 50px auto;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.dealer,
+.player {
+  width: 200px;
+  height: 300px;
+}
+
+.card-space {
+  width: 200px;
+  height: 300px;
+  position: relative;
+}
+
+.dealer-card {
+  width: 200px;
+  height: 300px;
+  background: #fff;
+  border-radius: 5px;
+  line-height: 70px;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-card {
+  width: 200px;
+  height: 300px;
+  background: #fff;
+  border-radius: 5px;
+  line-height: 70px;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.front-card {
+  visibility: hidden;
+}
+
+.dealer img {
+  width: 200px;
+  height: 300px;
+  background: #fff;
+  border-radius: 5px;
+  line-height: 70px;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-card img {
+  width: 200px;
+  height: 300px;
+  background: #fff;
+  border-radius: 5px;
+  line-height: 70px;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+/* カードを伏せる */
+#wrapper {
+  position: relative;
+  /* ボタンクリック後カードが立体的に表側を向く */
+  transform-style: preserve-3d;
+  transition: 0.3s;
+}
+
+/* ボタンをクリックしてカードが開いた後表を向く */
+#wrapper.open {
+  transform: rotateY(180deg);
+}
+
+.back,
+.front-card {
+  /* カードの表側の位置 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* カードの表側が現れる */
+  backface-visibility: hidden;
+}
+
+/* カード回転時の奥行き */
+.player {
+  perspective: 100px;
+}
+
+.dealer,
+.player {
+  cursor: pointer;
+}
+
+/* ボタン */
+.buttom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #000;
+  border: 5px solid #fff;
+  font-size: 20px;
+  color: #fff;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#high {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttom-space {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secret {
+  visibility: hidden;
+}
+
+.next-btn {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #000;
+  border: 5px solid #fff;
+  font-size: 20px;
+  color: #fff;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#low {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ボタンにカーソルを乗せた時 */
+.btn:hover {
+  margin-top: 2px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ボタンクリック後のボタンの状態 */
+.btn.disabled {
+  opacity: 0.4;
+  margin-top: 2px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
